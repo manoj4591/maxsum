@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script>
+                    let reverse = (xString) => {
+                        let spaceRemoved = xString.replace(/ +(?= )/g,'');
+                        let xdiff  = spaceRemoved.split(' ');
+                        console.log(xdiff);
+                        let finalWord = [];
+                        xdiff.map((x,y) =>{
+
+                            if(y % 2 !== 0){
+                                finalWord.push(x.split("").reverse().join(""));
+                            } else {
+                                finalWord.push(x);
+                            }
+                        })
+                        let lastword = finalWord.join(' ');
+                        console.log(lastword);
+
+                    }
+                    
+                    reverse('reverse me  fast! babay');
+                </script>
+    </head>
+
+<body>
+
+</body>
+</html>

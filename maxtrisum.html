@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+        <head>
+                <script>
+                        let maxTriSum = (xArray) => {
+                            let newArray = [...new Set(xArray)]
+                            let value = threelargest(newArray, newArray.length)
+                            console.log(value);
+                        }
+
+                        let threelargest = (array, length) => {
+                                let first = 0, second = 0, third = 0;
+                                    if (length < 3) 
+                                    { 
+                                        console.log(" Invalid Input "); 
+                                        return; 
+                                    } 
+                                    for (let i = 0; i < length ; i ++) 
+                                    { 
+                                        if (array[i] > first) 
+                                        { 
+                                            third = second; 
+                                            second = first; 
+                                            first = array[i]; 
+                                        } 
+                                        else if (array[i] > second) 
+                                        { 
+                                            third = second; 
+                                            second = array[i]; 
+                                        } 
+                                
+                                        else if (array[i] > third) 
+                                            third = array[i]; 
+                                    } 
+                                
+                                   return first + second + third;
+                                } 
+                        maxTriSum([3,2,6,8,2, 3]);
+                    </script>
+        </head>
+</body>
+</html>
